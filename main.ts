@@ -1,6 +1,46 @@
 namespace SpriteKind {
     export const Object = SpriteKind.create()
 }
+namespace myTiles {
+    //% blockIdentity=images._tile
+    export const tile0 = img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile1 = img`
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a 
+`
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Object, function (sprite, otherSprite) {
     info.changeScoreBy(1)
     Trampoline.setKind(SpriteKind.Object)
@@ -96,24 +136,6 @@ let RocketPack = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Enemy)
 RocketPack.setPosition(300, 670)
-scene.setTile(8, img`
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 2 4 4 4 4 4 4 4 4 4 4 4 2 2 2 
-2 4 2 2 4 4 4 4 4 4 4 4 2 2 4 2 
-2 4 4 2 2 4 4 4 4 4 2 2 4 4 4 2 
-2 4 4 4 2 4 4 4 4 2 4 4 4 4 4 2 
-2 4 4 4 4 2 4 2 2 4 4 4 4 4 4 2 
-2 4 4 4 4 4 2 2 4 4 4 4 4 4 4 2 
-2 4 4 4 4 4 2 2 4 4 4 4 4 4 4 2 
-2 4 4 4 4 2 2 2 2 4 4 4 4 4 4 2 
-2 4 4 4 2 2 4 4 2 2 4 4 4 4 4 2 
-2 4 4 2 2 4 4 4 4 2 2 4 4 4 4 2 
-2 4 2 2 4 4 4 4 4 4 2 2 4 4 4 2 
-2 4 2 4 4 4 4 4 4 4 4 2 2 4 4 2 
-2 2 2 4 4 4 4 4 4 4 4 4 2 2 4 2 
-2 2 4 4 4 4 4 4 4 4 4 4 4 4 2 2 
-2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-`, true)
 info.startCountdown(60)
 game.onUpdate(function () {
     Jared.x += controller.dx()
