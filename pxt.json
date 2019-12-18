@@ -1,7 +1,8 @@
 {
     "name": "JumpyDude",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "color-coded-tilemap": "*"
     },
     "description": "",
     "files": [
