@@ -2,7 +2,8 @@
     "name": "JumpyDude",
     "dependencies": {
         "device": "*",
-        "color-coded-tilemap": "*"
+        "color-coded-tilemap": "*",
+        "JumpyDude": "github:mathewmoreno/pxt-jumpydude#master"
     },
     "description": "",
     "files": [
